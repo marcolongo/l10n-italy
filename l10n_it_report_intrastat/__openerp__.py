@@ -32,7 +32,6 @@
         'l10n_it_intrastat',
         'report', ],
     'data': [
-        'report/fiscal_layout.xml',
         'report/mod1.xml',
         'reports.xml', ],
     'active': False,

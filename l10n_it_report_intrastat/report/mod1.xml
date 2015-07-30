@@ -2,61 +2,43 @@
 <openerp>
 <data>
 
-<template id="report.minimal_layout">
-    <t t-raw="'&lt;base href=%s&gt;' % base_url"/>
-    &lt;!DOCTYPE html&gt;
-    <html style="height: 0;">
-        <head>
-            <link href="/report/static/src/css/reset.min.css" rel="stylesheet"/>
-            <link href="/web/static/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
-            <link href="/website/static/src/css/website.css" rel="stylesheet"/>
-            <link href="/web/static/lib/fontawesome/css/font-awesome.css" rel="stylesheet"/>
-            <style type='text/css'><t t-raw="css"/></style>
-            <t t-if="subst is True">
-                <script src='/l10n_it_report_intrastat/static/src/js/subst.js' />
-            </t>
-        </head>
-        <body class="container" onload="subst()">
-            <t t-raw="body"/>
-        </body>
-    </html>
-</template>
-
-<!--template id="report_intrastat_mod1_layout">
-
-    <t t-call="l10n_it_report_intrastat.fiscal_header_layout"/>
-    <t t-raw="0" />
-
-</template-->
-
 <template id="report_intrastat_mod-1">
-    <!--t t-call="l10n_it_report_intrastat.report_intrastat_mod1_layout"-->
-        <div class="page">
-            <div class="row">
-                <p class="col-xs-6">
-                    Mod.INTRA-1
-                </p>
-                <p class="col-xs-8">
-                    ELENCO RIEPILOGATIVO DELLE CESSIONI
-                    INTRACOMUNITARIEDI BENI E DEI SERVIZI RESI
-                </p>
-            </div>
-            <hr />
-        </div>
-    <table>
-        <th>
-            <td>PERIODICITÀ ELENCO</td>
-        </th>
-        <tr>
-            <td rowspan="2">PERIODO DI RIFERIMENTO</td>
-            <td>MESE: ANNO:</td>
-            <td rowspan="2"> NUMERO DI RIFERIMENTO <br/>3</td>
-        </tr>
-        <tr>
-            <td>TRIMESTRE</td>
-        </tr>
-    </table>
-    <!--/t-->
+    <style>
+        .cell_bordered {
+            border: 1px solid black;
+        }
+        .no_border {
+            border: 0px;
+        }
+    </style>
+    <div class="page">
+        <table class="table no_border">
+            <tr>
+                <td width="75%"></td>
+                <td class="cell_bordered">Mod.INTRA-1</td>
+            </tr>
+        </table>
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <td width="30%"></td>
+                <td>ELENCO RIEPILOGATIVO DELLE CESSIONI
+                <br/>INTRACOMUNITARIEDI BENI E DEI SERVIZI RESI
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <table class="table table-condensed table-bordered">
+            <th colspan="3">PERIODICITÀ ELENCO</th>
+            <tr>
+                <td rowspan="2">PERIODO DI RIFERIMENTO</td>
+                <td>MESE: ANNO:</td>
+                <td rowspan="2"> NUMERO DI RIFERIMENTO <br/>3</td>
+            </tr>
+            <tr>
+                <td>TRIMESTRE</td>
+            </tr>
+        </table>
+    </div>
 </template>
 
 </data>

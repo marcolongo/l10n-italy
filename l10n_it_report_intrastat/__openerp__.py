@@ -32,7 +32,7 @@
         'l10n_it_intrastat',
         'report', ],
     'data': [
-        'report/mod1.xml',
+        'report/report_intrastat_mod1.xml',
         'reports.xml', ],
     'active': False,
     'installable': True

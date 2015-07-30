@@ -2,7 +2,7 @@
 <openerp>
 <data>
 
-<template id="report_intrastat_mod-1">
+    <template id="report_intrastat_mod1">
     <style>
         .bordered {
             border: 1px solid black;
@@ -11,6 +11,7 @@
             border: 0px;
         }
     </style>
+    <t t-foreach="objects" t-as="o">
     <div class="page">
         <table class="table">
             <tr>
@@ -31,8 +32,8 @@
             <th  class="bordered" colspan="3">PERIODICITÀ ELENCO</th>
             <tr>
                 <td class="bordered" width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
-                <td class="bordered">MESE: <span t-esc="o.period_number"/>ANNO:</td>
-                <td class="bordered" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/>3</td>
+                <td class="bordered">MESE: <span t-esc="o.period_number"/> ANNO: <span t-esc="o.fiscal_year_id.code"/></td>
+                <td class="bordered" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/><span t-esc="o.number"/></td>
             </tr>
             <tr>
                 <td>TRIMESTRE</td>
@@ -112,6 +113,7 @@
             </tr>
         </table>
     </div>
+    </t>
 </template>
 
 </data>

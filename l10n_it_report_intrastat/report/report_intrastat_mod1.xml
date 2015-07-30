@@ -7,8 +7,11 @@
         .bordered {
             border: 1px solid black;
         }
-        .no_border {
-            border: 0px;
+        .center {
+            text-align: center;
+        }
+        .font_bold {
+            font-weight: bold;
         }
     </style>
     <t t-foreach="objects" t-as="o">
@@ -31,24 +34,24 @@
         <table class="table table-condensed bordered">
             <th  class="bordered" colspan="3">PERIODICITÀ ELENCO</th>
             <tr>
-                <td class="bordered" width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
-                <td class="bordered">MESE: <span t-esc="o.period_number"/> ANNO: <span t-esc="o.fiscal_year_id.code"/></td>
-                <td class="bordered" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/><span t-esc="o.number"/></td>
+                <td class="bordered center" width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
+                <td class="bordered">MESE: <span class="font_bold" t-esc="o.period_number"/> ANNO: <span class="font_bold" t-esc="o.fiscalyear_id.code"/></td>
+                <td class="bordered center" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/><span class="font_bold" t-esc="o.number"/></td>
             </tr>
             <tr>
                 <td>TRIMESTRE</td>
             </tr>
         </table>
         <table class="table table-condensed bordered">
-            <th colspan="4">SOGGETTO OBBLIGATO</th>
+            <th colspan="4" class="border">SOGGETTO OBBLIGATO</th>
             <tr>
-                <td colspan="4">PARTITA IVA</td>
+                <td colspan="4">PARTITA IVA<p/></td>
             </tr><tr>
-                <td colspan="4">PERSONA FISICA</td>
+                <td colspan="4" class="border">PERSONA FISICA</td>
             </tr><tr>
-                <td colspan="2">COGNOME</td><td colspan="2">NOME</td>
+                <td colspan="2">COGNOME<p/></td><td colspan="2">NOME<p/></td>
             </tr><tr>
-                <td colspan="4">SOGGETTO DIVERSO DA PERSONA FISICA</td>
+                <td colspan="4" class="border">SOGGETTO DIVERSO DA PERSONA FISICA</td>
             </tr><tr>
                 <td colspan="4">DENOMINAZIONE / RAGIONE SOCIALE</td>
             </tr>
@@ -80,10 +83,10 @@
                 <td>AMMONTARE COMPLESSIVO IN EURO</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>500.00</td>
-                <td>1</td>
-                <td>500.00</td>
+                <td><span t-esc="o.sale_section1_operation_number or ''"/></td>
+                <td><span t-esc="o.sale_section1_operation_amount or ''"/></td>
+                <td><span t-esc="o.sale_section2_operation_number or ''"/></td>
+                <td><span t-esc="o.sale_section2_operation_amount or ''"/></td>
             </tr>
             <tr>
                 <td rowspan="2">BENI</td>
@@ -96,10 +99,10 @@
                 <td>AMMONTARE COMPLESSIVO IN EURO</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>500.00</td>
-                <td>1</td>
-                <td>500.00</td>
+                <td><span t-esc="o.sale_section3_operation_number or ''"/></td>
+                <td><span t-esc="o.sale_section3_operation_amount or ''"/></td>
+                <td><span t-esc="o.sale_section4_operation_number or ''"/></td>
+                <td><span t-esc="o.sale_section4_operation_amount or ''"/></td>
             </tr>
         </table>
         <table class="table table-condensed bordered">
@@ -108,8 +111,8 @@
                 <td>DATA PRESENTAZIONE</td>
                 <td>PROTOCOLLO</td>
             </tr><tr>
-                <td></td>
-                <td></td>
+                <td><p/><p/></td>
+                <td><p/><p/></td>
             </tr>
         </table>
     </div>

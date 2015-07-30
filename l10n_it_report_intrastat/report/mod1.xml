@@ -30,12 +30,75 @@
         <table class="table table-condensed table-bordered">
             <th colspan="3">PERIODICITÀ ELENCO</th>
             <tr>
-                <td rowspan="2">PERIODO DI RIFERIMENTO</td>
+                <td width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
                 <td>MESE: ANNO:</td>
-                <td rowspan="2"> NUMERO DI RIFERIMENTO <br/>3</td>
+                <td width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/>3</td>
             </tr>
             <tr>
                 <td>TRIMESTRE</td>
+            </tr>
+        </table>
+        <table class="table table-condensed table-bordered">
+            <th colspan="4">SOGGETTO OBBLIGATO</th>
+            <tr>
+                <td colspan="4">PARTITA IVA</td>
+            </tr><tr>
+                <td colspan="4">PERSONA FISICA</td>
+            </tr><tr>
+                <td colspan="2">COGNOME</td><td colspan="2">NOME</td>
+            </tr><tr>
+                <td colspan="4">SOGGETTO DIVERSO DA PERSONA FISICA</td>
+            </tr><tr>
+                <td colspan="4">DENOMINAZIONE / RAGIONE SOCIALE</td>
+            </tr>
+            <tr>
+                <td width="10%"></td>
+                <td width="40%">BARRARE LA CASELLA NEL CASO NON SIANO STATI PRESENTATI IN PRECEDENZA ELENCHI RIEPILOGATIVI (Mod. INTRA-1 od INTRA-2)</td>
+                <td width="10%"></td>
+                <td width="40%">BARRARE LA CASELLA IN CASO DI CESSAZIONE DI ATTIVITÀ OVVERO DI VARIAZIONE DELLA PARTITA IVA</td>
+            </tr>
+        </table>
+        <table class="table table-condensed table-bordered">
+            <th>SOGGETTO DELEGATO</th>
+            <tr>
+                <td>PARTITA IVA</td>
+            </tr><tr>
+                <td>COGNOME E NOME o DENOMINAZIONE / RAGIONE SOCIALE</td>
+            </tr>
+        </table>
+        <table class="table table-condensed table-bordered">
+            <th colspan="8">DATI RIASSUNTIVI DELL'ELENCO</th>
+            <tr>
+                <td rowspan="2">BENI</td>
+                <td rowspan="2">SEZIONE 1</td>
+                <td>TOTALE RIGHE DETTAGLIO</td>
+                <td>AMMONTARE COMPLESSIVO IN EURO</td>
+                <td rowspan="2">BENI</td>
+                <td rowspan="2">SEZIONE 2</td>
+                <td>TOTALE RIGHE DETTAGLIO</td>
+                <td>AMMONTARE COMPLESSIVO IN EURO</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>500.00</td>
+                <td>1</td>
+                <td>500.00</td>
+            </tr>
+            <tr>
+                <td rowspan="2">BENI</td>
+                <td rowspan="2">SEZIONE 3</td>
+                <td>TOTALE RIGHE DETTAGLIO</td>
+                <td>AMMONTARE COMPLESSIVO IN EURO</td>
+                <td rowspan="2">BENI</td>
+                <td rowspan="2">SEZIONE 4</td>
+                <td>TOTALE RIGHE DETTAGLIO</td>
+                <td>AMMONTARE COMPLESSIVO IN EURO</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>500.00</td>
+                <td>1</td>
+                <td>500.00</td>
             </tr>
         </table>
     </div>

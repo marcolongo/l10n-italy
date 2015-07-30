@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <report
+        string="Mod. INTRA-1"
+        id="report_intrastat_mod1"
+        model="account.intrastat.statement"
+        report_type="qweb-pdf"
+        name="l10n_it_report_intrastat.report_intrastat_mod-1"
+        file="l10n_it_report_intrastat.mod1"
+        />
+
+    </data>
+</openerp>

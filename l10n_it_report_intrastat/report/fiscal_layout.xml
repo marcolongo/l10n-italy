@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="fiscal_header_layout">
+        <!-- Multicompany -->
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id" />
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company" />
+        </t>
+
+        <div class="header">
+            <div class="row">
+                <div class="col-xs-9">
+                    <address>
+                        <strong><span t-esc="company.name"/></strong><br/>
+                        <div t-field="company.partner_id"
+                             t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'
+                             style="border-bottom: 1px solid black;"/>
+                        <br/>
+                        <span>P.IVA: </span><span t-esc="company.partner_id.vat"/>
+                    </address>
+                </div>
+                <div class="col-xs-3 text-right">
+                    <ul class="list-inline">
+                        <li><span class="page_with_offset"><t t-esc="start_page" /></span></li>
+                        <li>/</li>
+                        <li><span t-esc="year_page"/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </template>
+
+</data>
+</openerp>

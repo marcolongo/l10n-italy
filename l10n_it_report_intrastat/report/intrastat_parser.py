@@ -39,8 +39,6 @@ class ReportIntrastatQweb(models.AbstractModel):
             'doc_ids': self._ids,
             'doc_model': report.model,
             'o': self.env[report.model].browse(self._ids),
-            'year_page': data.get('year_page', ''),
-            'start_page': data.get('start_page', ''),
         }
         return report_obj.render(
             'l10n_it_report_intrastat.report_intrastat_mod1',

@@ -15,7 +15,7 @@
         id="report_intrastat_mod1"
         model="account.intrastat.statement"
         report_type="qweb-pdf"
-        name="l10n_it_report_intrastat.report_intrastat_mod-1"
+        name="l10n_it_report_intrastat.report_intrastat_mod1"
         file="l10n_it_report_intrastat.mod1"
         />
 

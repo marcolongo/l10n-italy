@@ -4,7 +4,7 @@
 
 <template id="report_intrastat_mod-1">
     <style>
-        .cell_bordered {
+        .bordered {
             border: 1px solid black;
         }
         .no_border {
@@ -12,33 +12,33 @@
         }
     </style>
     <div class="page">
-        <table class="table no_border">
+        <table class="table">
             <tr>
                 <td width="75%"></td>
-                <td class="cell_bordered">Mod.INTRA-1</td>
+                <td class="bordered">Mod.INTRA-1</td>
             </tr>
         </table>
-        <table class="table table-condensed table-bordered">
+        <table class="table table-condensed">
             <tr>
                 <td width="30%"></td>
-                <td>ELENCO RIEPILOGATIVO DELLE CESSIONI
-                <br/>INTRACOMUNITARIEDI BENI E DEI SERVIZI RESI
+                <td class="bordered"><b>ELENCO RIEPILOGATIVO DELLE CESSIONI
+                <br/>INTRACOMUNITARIEDI BENI E DEI SERVIZI RESI</b>
                 </td>
             </tr>
         </table>
         <hr />
-        <table class="table table-condensed table-bordered">
-            <th colspan="3">PERIODICITÀ ELENCO</th>
+        <table class="table table-condensed bordered">
+            <th  class="bordered" colspan="3">PERIODICITÀ ELENCO</th>
             <tr>
-                <td width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
-                <td>MESE: ANNO:</td>
-                <td width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/>3</td>
+                <td class="bordered" width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
+                <td class="bordered">MESE: <span t-esc="object.period_number"/>ANNO:</td>
+                <td class="bordered" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/>3</td>
             </tr>
             <tr>
                 <td>TRIMESTRE</td>
             </tr>
         </table>
-        <table class="table table-condensed table-bordered">
+        <table class="table table-condensed bordered">
             <th colspan="4">SOGGETTO OBBLIGATO</th>
             <tr>
                 <td colspan="4">PARTITA IVA</td>
@@ -58,7 +58,7 @@
                 <td width="40%">BARRARE LA CASELLA IN CASO DI CESSAZIONE DI ATTIVITÀ OVVERO DI VARIAZIONE DELLA PARTITA IVA</td>
             </tr>
         </table>
-        <table class="table table-condensed table-bordered">
+        <table class="table table-condensed bordered">
             <th>SOGGETTO DELEGATO</th>
             <tr>
                 <td>PARTITA IVA</td>
@@ -66,7 +66,7 @@
                 <td>COGNOME E NOME o DENOMINAZIONE / RAGIONE SOCIALE</td>
             </tr>
         </table>
-        <table class="table table-condensed table-bordered">
+        <table class="table table-condensed bordered">
             <th colspan="8">DATI RIASSUNTIVI DELL'ELENCO</th>
             <tr>
                 <td rowspan="2">BENI</td>
@@ -99,6 +99,16 @@
                 <td>500.00</td>
                 <td>1</td>
                 <td>500.00</td>
+            </tr>
+        </table>
+        <table class="table table-condensed bordered">
+            <th colspan="8">SPAZIO RISERVATO ALL'UFFICIO</th>
+            <tr>
+                <td>DATA PRESENTAZIONE</td>
+                <td>PROTOCOLLO</td>
+            </tr><tr>
+                <td></td>
+                <td></td>
             </tr>
         </table>
     </div>

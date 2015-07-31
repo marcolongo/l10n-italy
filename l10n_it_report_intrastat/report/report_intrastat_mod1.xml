@@ -13,45 +13,53 @@
         .font_bold {
             font-weight: bold;
         }
+        .fondo {
+            background-color: #E1E1E0
+        }
+
     </style>
     <t t-foreach="objects" t-as="o">
     <div class="page">
-        <table class="table">
-            <tr>
-                <td width="75%"></td>
-                <td class="bordered">Mod.INTRA-1</td>
-            </tr>
-        </table>
-        <table class="table table-condensed">
-            <tr>
-                <td width="30%"></td>
-                <td class="bordered"><b>ELENCO RIEPILOGATIVO DELLE CESSIONI
-                <br/>INTRACOMUNITARIEDI BENI E DEI SERVIZI RESI</b>
-                </td>
-            </tr>
-        </table>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-9">
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Mod.INTRA-1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-xs-offset-4">
+                <table class="table table-bordered">
+                <tr>
+                    <td><b>ELENCO RIEPILOGATIVO DELLE CESSIONI
+                    <br/>INTRACOMUNITARIEDI BENI E DEI SERVIZI RESI</b>
+                    </td>
+                </tr>
+                </table>
+            </div>
+        </div>
         <hr />
-        <table class="table table-condensed bordered">
-            <th  class="bordered" colspan="3">PERIODICITÀ ELENCO</th>
+        <table class="table table-bordered">
+            <th colspan="3" class="fondo">PERIODICITÀ ELENCO</th>
             <tr>
-                <td class="bordered center" width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
-                <td class="bordered">MESE: <span class="font_bold" t-esc="o.period_number"/> ANNO: <span class="font_bold" t-esc="o.fiscalyear_id.code"/></td>
-                <td class="bordered center" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/><span class="font_bold" t-esc="o.number"/></td>
+                <td width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
+                <td>MESE: <span class="font_bold" t-esc="o.period_number"/> ANNO: <span class="font_bold" t-esc="o.fiscalyear_id.code"/></td>
+                <td class="center" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/><span class="font_bold" t-esc="o.number"/></td>
             </tr>
             <tr>
                 <td>TRIMESTRE</td>
             </tr>
         </table>
-        <table class="table table-condensed bordered">
-            <th colspan="4" class="border">SOGGETTO OBBLIGATO</th>
+        <table class="table table-bordered">
+            <th colspan="4" class="fondo">SOGGETTO OBBLIGATO</th>
             <tr>
                 <td colspan="4">PARTITA IVA<p/></td>
             </tr><tr>
-                <td colspan="4" class="border">PERSONA FISICA</td>
+                <td colspan="4" class="fondo">PERSONA FISICA</td>
             </tr><tr>
                 <td colspan="2">COGNOME<p/></td><td colspan="2">NOME<p/></td>
             </tr><tr>
-                <td colspan="4" class="border">SOGGETTO DIVERSO DA PERSONA FISICA</td>
+                <td colspan="4" class="fondo">SOGGETTO DIVERSO DA PERSONA FISICA</td>
             </tr><tr>
                 <td colspan="4">DENOMINAZIONE / RAGIONE SOCIALE</td>
             </tr>
@@ -62,16 +70,16 @@
                 <td width="40%">BARRARE LA CASELLA IN CASO DI CESSAZIONE DI ATTIVITÀ OVVERO DI VARIAZIONE DELLA PARTITA IVA</td>
             </tr>
         </table>
-        <table class="table table-condensed bordered">
-            <th>SOGGETTO DELEGATO</th>
+        <table class="table table-bordered">
+            <th class="fondo">SOGGETTO DELEGATO</th>
             <tr>
                 <td>PARTITA IVA</td>
             </tr><tr>
                 <td>COGNOME E NOME o DENOMINAZIONE / RAGIONE SOCIALE</td>
             </tr>
         </table>
-        <table class="table table-condensed bordered">
-            <th colspan="8">DATI RIASSUNTIVI DELL'ELENCO</th>
+        <table class="table table-bordered">
+            <th colspan="8" class="fondo">DATI RIASSUNTIVI DELL'ELENCO</th>
             <tr>
                 <td rowspan="2">BENI</td>
                 <td rowspan="2">SEZIONE 1</td>
@@ -105,8 +113,8 @@
                 <td><span t-esc="o.sale_section4_operation_amount or ''"/></td>
             </tr>
         </table>
-        <table class="table table-condensed bordered">
-            <th colspan="8">SPAZIO RISERVATO ALL'UFFICIO</th>
+        <table class="table table-bordered">
+            <th colspan="8" class="fondo">SPAZIO RISERVATO ALL'UFFICIO</th>
             <tr>
                 <td>DATA PRESENTAZIONE</td>
                 <td>PROTOCOLLO</td>

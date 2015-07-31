@@ -114,7 +114,7 @@
             </tr>
         </table>
         <table class="table table-bordered">
-            <th colspan="8" class="fondo">SPAZIO RISERVATO ALL'UFFICIO</th>
+            <th colspan="8" class="fondo text-center">SPAZIO RISERVATO ALL'UFFICIO</th>
             <tr>
                 <td>DATA PRESENTAZIONE</td>
                 <td>PROTOCOLLO</td>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="report_intrastat_mod1">
+        <style>
+            .fondo {
+                background-color: #E1E1E0
+            }
+        </style>
+        <t t-foreach="objects" t-as="o">
+            <div class="page">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-xs-7 text-center">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>
+                                    <b>RIEPILOGO DELLE CESSIONI INTRACOMUNITARIE
+                                    <br/>DI BENI E DEI SERVIZI RESI</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-3 col-xs-offset-9">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>Mod.INTRA-1 Bis</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <span class="text-center">
+                        SEZIONE 1. CESSIONI DI BENI REGISTRATE NEL PERIODO
+                    </span>
+                    <div class="row">
+                        <span>PERIODO: </span>
+                        <span>MESE: </span>
+                        <strong><span t-esc="o.period_number"></span></strong>
+                        <span>TRIMESTRE: </span>
+                        <strong><span></span></strong>
+                        <span>ANNO: </span>
+                        <strong><span t-esc="o.fiscalyear_id.code"></span></strong>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead class="fondo">
+                            <tr>
+                                <th></th>
+                                <th>ACQUIRENTE</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>PROG.</th>
+                                <th>STATO</th>
+                                <th>CODICE IVA</th>
+                                <th>AMMONTARE DELLE OPERAZIONI IN EURO</th>
+                                <th>NATURA TRANS.</th>
+                                <th>NOMENCLATURA COMBINATA</th>
+                                <th>MASSA NETTA</th>
+                                <th>UNITA' SUPPLEMENTARE</th>
+                                <th>VALORE STATISTICO IN EURO</th>
+                                <th>COND. CONS.</th>
+                                <th>MODO TRASP.</th>
+                                <th>PAESE DEST.</th>
+                                <th>PROV. ORIG.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                                <td t-esc="o.xxx"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</data>
+</openerp>

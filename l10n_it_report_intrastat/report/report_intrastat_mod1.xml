@@ -97,11 +97,11 @@
                 <td><span t-esc="o.sale_section2_operation_amount or ''"/></td>
             </tr>
             <tr>
-                <td rowspan="2">BENI</td>
+                <td rowspan="2">SERVIZI</td>
                 <td rowspan="2">SEZIONE 3</td>
                 <td>TOTALE RIGHE DETTAGLIO</td>
                 <td>AMMONTARE COMPLESSIVO IN EURO</td>
-                <td rowspan="2">BENI</td>
+                <td rowspan="2">SERVIZI</td>
                 <td rowspan="2">SEZIONE 4</td>
                 <td>TOTALE RIGHE DETTAGLIO</td>
                 <td>AMMONTARE COMPLESSIVO IN EURO</td>

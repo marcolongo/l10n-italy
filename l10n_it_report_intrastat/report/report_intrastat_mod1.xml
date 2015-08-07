@@ -53,7 +53,7 @@
         <table class="table table-bordered">
             <th colspan="4" class="fondo">SOGGETTO OBBLIGATO</th>
             <tr>
-                <td colspan="4">PARTITA IVA<p/></td>
+                <td colspan="4">PARTITA IVA: <span class="font_bold" t-esc="o.company_id.partner_id.vat"/><br/></td>
             </tr><tr>
                 <td colspan="4" class="fondo">PERSONA FISICA</td>
             </tr><tr>
@@ -61,7 +61,7 @@
             </tr><tr>
                 <td colspan="4" class="fondo">SOGGETTO DIVERSO DA PERSONA FISICA</td>
             </tr><tr>
-                <td colspan="4">DENOMINAZIONE / RAGIONE SOCIALE</td>
+                <td colspan="4">DENOMINAZIONE / RAGIONE SOCIALE<br/><span class="font_bold" t-esc="o.company_id.partner_id.name"/></td>
             </tr>
             <tr>
                 <td width="10%"></td>
@@ -73,9 +73,9 @@
         <table class="table table-bordered">
             <th class="fondo">SOGGETTO DELEGATO</th>
             <tr>
-                <td>PARTITA IVA</td>
+                <td>PARTITA IVA: <span class="font_bold" t-esc="o.company_id.intrastat_delegated_vat"/><br/></td>
             </tr><tr>
-                <td>COGNOME E NOME o DENOMINAZIONE / RAGIONE SOCIALE</td>
+                <td>COGNOME E NOME o DENOMINAZIONE / RAGIONE SOCIALE <br/><span class="font_bold" t-esc="o.company_id.intrastat_delegated_name"/></td>
             </tr>
         </table>
         <table class="table table-bordered">

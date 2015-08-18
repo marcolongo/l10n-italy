@@ -23,5 +23,27 @@
         <field name="paperformat_id" ref="l10n_it_report_intrastat.no_header_format_a4_vertical"/>
     </record>
 
+    <!-- Mod. Intra1-bis -->
+    <record id="no_header_format_a4_landscape" model="report.paperformat">
+        <field name="name">No Header A4 Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">5</field>
+        <field name="orientation">Landscape</field>
+        <field name="header_spacing">15</field>
+    </record>
+
+    <report
+        string="Mod. INTRA-1 Bis"
+        id="print_intrastat_mod1_bis"
+        model="account.intrastat.statement"
+        report_type="qweb-pdf"
+        name="l10n_it_report_intrastat.report_intrastat_mod1_bis"
+        file="l10n_it_report_intrastat.report_intrastat_mod1_bis"
+        />
+
+    <record id="print_intrastat_mod1_bis" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="l10n_it_report_intrastat.no_header_format_a4_landscape"/>
+    </record>
+
     </data>
 </openerp>

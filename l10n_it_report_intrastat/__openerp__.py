@@ -33,6 +33,7 @@
         'report', ],
     'data': [
         'report/report_intrastat_mod1.xml',
+        'report/intrastat_mod1_bis.xml',
         'reports.xml', ],
     'active': False,
     'installable': True

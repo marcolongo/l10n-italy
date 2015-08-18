@@ -39,7 +39,7 @@ class ReportIntrastatQweb(models.AbstractModel):
             'doc_model': report.model,
             'objects': self.env[report.model].browse(self._ids),
         }
-        print docargs
+        # print docargs
         return report_obj.render(
             'l10n_it_report_intrastat.report_intrastat_mod1',
             docargs)

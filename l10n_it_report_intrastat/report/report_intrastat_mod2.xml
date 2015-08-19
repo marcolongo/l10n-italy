@@ -44,7 +44,7 @@
             <tr>
                 <td width="20%" rowspan="2">PERIODO DI RIFERIMENTO</td>
                 <td>MESE: <span class="font_bold" t-esc="o.period_number"/> ANNO: <span class="font_bold" t-esc="o.fiscalyear_id.code"/></td>
-                <td class="center" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/><span class="font_bold" t-esc="o.number"/></td>
+                <td class="center" width="20%" rowspan="2"> NUMERO DI RIFERIMENTO <br/><span class="font_bold" t-esc="o.purchase_statement_sequence"/></td>
             </tr>
             <tr>
                 <td>TRIMESTRE</td>

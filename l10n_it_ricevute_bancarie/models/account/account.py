@@ -25,6 +25,7 @@
 ##############################################################################
 
 from openerp.osv import fields, orm
+from openerp import api
 
 
 class account_payment_term(orm.Model):
@@ -99,6 +100,18 @@ class account_move_line(orm.Model):
 
 
 class account_invoice(orm.Model):
+
+    @api.one
+    @api.constrains('unsolved_move_line_ids')
+    def _set_unreconciled(self):
+        if self.unsolved_move_line_ids: 
+            self.state = 'open'
+            self.is_unsolved = True
+            self.reconciled= False
+            for line in self.sudo().move_id.line_id:
+                if self.move_name == line.name:
+                    line.reconcile_id= False
+                    line.reconcile_ref=""
 
     def _get_is_unsolved(self, cr, uid, ids, name, arg, context=None):
         res = {}
